@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'mac'
+    }
+
+  }
   stages {
     stage('build') {
       steps {
