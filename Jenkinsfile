@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('test') {
+      steps {
+        ctest(installation: 'Autoinstall', arguments: '-V', workingDir: 'build')
+      }
+    }
+
   }
 }
