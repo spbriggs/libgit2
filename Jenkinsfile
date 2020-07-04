@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        cmakeBuild(installation: 'Autoinstall', buildDir: 'build', buildType: 'Release')
+        cmakeBuild(installation: 'Autoinstall', buildDir: 'build', buildType: 'Release', cleanBuild: true, cmakeArgs: '--build')
       }
     }
 
